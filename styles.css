@@ -69,6 +69,7 @@ h1,h2,h3 {
 /* Navbar after scroll */
 .navbar.scrolled {
   position: fixed;
+  z-index: 40;
   background: #fff;
   color: #000;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -332,7 +333,13 @@ section.staff img{
       font-size: 1.3rem;
       line-height: 1.6;
     }
-
+.parallax .content-container .content img{
+  position: relative;
+  z-index: -1;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+} 
     /* Active testimonial slides in */
     .content.active {
       transform: translate(-50%, -50%);

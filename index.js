@@ -6,6 +6,17 @@ menuToggle.addEventListener("click", () => {
 });
 
 
+const navbar = document.querySelector(".navbar");
+const hero = document.querySelector(".hero");
+
+window.addEventListener("scroll", () => {
+  const heroHeight = hero.offsetHeight;
+  if (window.scrollY > heroHeight - 80) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
 
 
 const contents = document.querySelectorAll('.content');
@@ -16,3 +27,6 @@ const contents = document.querySelectorAll('.content');
       index = (index + 1) % contents.length;
       contents[index].classList.add('active');
     }, 4000); // 4 seconds per slide
+
+
+    

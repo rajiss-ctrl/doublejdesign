@@ -7,8 +7,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-html{
-  
+html {
+  scroll-behavior: smooth;
 }
 body{
   font-family: "Montserrat", sans-serif;
@@ -48,19 +48,48 @@ h1,h2,h3 {
   padding-bottom: 30px;
 }
 /* Navbar */
+/* Default navbar (on hero) */
 .navbar {
   display: flex; 
   justify-content: space-between; 
   align-items: center;
   padding: 2rem 8.5rem;
-   background: transparent; 
-   color: #fff;
-    color: #fff;
-   font-weight: bold;
-   font-size: 1rem;
-   position: relative;
-   z-index: 10;
+  background: transparent;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  position: absolute; /* sits on top of hero */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  transition: all 0.3s ease-in-out; /* smooth */
 }
+
+/* Navbar after scroll */
+.navbar.scrolled {
+  position: fixed;
+  background: #fff;
+  color: #000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.navbar.scrolled .logo{
+  color: #071e55;
+}
+
+/* Ensure nav links switch color */
+.navbar.scrolled .nav-links a {
+  color: #000;
+}
+.navbar.scrolled .nav-links a:hover {
+  color: #25ad65;
+}
+.navbar.scrolled .btn {
+  border: 1.5px solid #25ad65;
+  color: #25ad65;
+}
+
 .logo{
   display: flex;
   align-items: center;
@@ -69,6 +98,10 @@ h1,h2,h3 {
   font-weight: 900;
   line-height: 0.6rem;
   cursor: pointer;
+  color: #fff;
+}
+.navbar a{
+  text-decoration: none;
 }
 .j{
   font-size: 5rem;
@@ -110,7 +143,7 @@ h1,h2,h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10rem;
+    margin-top: 16rem;
     text-align: center;
     color: #fff;
   }
@@ -445,12 +478,14 @@ footer .footer_link{
   .nav-links { display: none; flex-direction: column; gap: 10px; background: #184e5e; padding: 10px; }
   .menu-toggle { display: block; } */
   .hero-content {
-    margin-top: 4rem;
+    margin-top: 14rem;
   }
   .navbar {
   padding: 2rem 1.5rem;
   }
-  
+  .navbar.scrolled {
+ display: none;
+}
   .nav-links {
     position: fixed;
     top: 0;
@@ -509,7 +544,7 @@ footer .footer_link{
     .project-list {
       grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     }
-    section.form{
+    section.form,footer{
     flex-direction: column;
     }
     

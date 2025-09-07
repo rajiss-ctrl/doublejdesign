@@ -473,6 +473,18 @@ footer .footer_link{
   text-align: center;
  padding: 2rem;
 }
+footer .footer_link h2{
+  margin: 0.7rem;
+}
+footer .footer_link img{
+  width: 15%;
+}
+footer .footer_link a,
+footer .footer_link p a{
+  text-decoration: none;
+  color: #071e55;
+  font-size: 0.9rem;
+}
 .copy{
   text-align: center;
   padding: 2rem 0;
@@ -587,6 +599,15 @@ section.form form button{
     section.form,footer{
     flex-direction: column;
     }
+    footer{
+      padding: 0.8rem;
+    }
+    footer .footer_link{
+ padding: 0;
+}
+footer .footer_link img{
+  margin-top: 3rem;
+}
     
   }
  

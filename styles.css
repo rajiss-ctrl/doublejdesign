@@ -36,9 +36,9 @@ h1,h2,h3 {
 }
 
 .hero-content h1{
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: bold;
-  padding-bottom: 30px;
+  padding-bottom: 1rem;
   line-height: 100%;
 }
 .hero-content p{
@@ -133,6 +133,7 @@ h1,h2,h3 {
    font-size: 1rem;
    outline: none;
    cursor: pointer; 
+   text-decoration: none;
   }
   .btn:hover{
     color: #25ad65;
@@ -277,16 +278,20 @@ section.staff p{
   font-size: 1.2rem;
 }
 section.staff ul{
-  margin-top: 2rem;
+  margin: 2rem 0 2rem 0;
 }
 section.staff ul li{
   font-size: 1.2rem;
   line-height: 160%;
   list-style: none;
 }
-section.staff .staff-content button{
+section.staff .staff-content{
+  width: 50%;
+}
+section.staff .staff-content a{
   outline: none;
   border: none;
+  text-decoration: none;
   background: #25ad65;
   color: #fff;
   font-weight: normal;
@@ -296,11 +301,15 @@ section.staff .staff-content button{
   margin-top: 1rem;
   cursor: pointer;
 }
-section.staff img{
-  border-radius: 16px;
+section.staff figure{
   width: 45%;
+}
+section.staff figure img{
+  border-radius: 16px;
+  width: 100%;
   box-shadow: 0 4px 4px 12px #ebeeee;
 }
+
   /* Parallax background */
     .parallax {
       position: relative;
@@ -311,7 +320,7 @@ section.staff img{
       align-items: center;
       overflow: hidden;
     }
-
+    
     /* Container for testimonials */
     .content-container {
       position: relative;
@@ -325,6 +334,7 @@ section.staff img{
     /* Each testimonial */
     .content {
       position: absolute;
+      width: 100%;
       top: 50%;
       left: 50%;
       transform: translate(100%, -50%); /* Start off-screen to the right */
@@ -340,10 +350,12 @@ section.staff img{
   height: 100px;
   border-radius: 50%;
 } 
+
     /* Active testimonial slides in */
     .content.active {
       transform: translate(-50%, -50%);
       opacity: 1;
+      width: 100%;
     }
 
     /* Styling text */
@@ -377,6 +389,7 @@ section.staff img{
   position: relative;
   overflow: hidden;
   border-radius: 10px;
+  cursor: pointer;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   transition: transform 0.3s ease;
 }
@@ -417,14 +430,54 @@ section.staff img{
 .project-item:hover .overlay i {
   transform: scale(1);
 }
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,0.8);
+}
+.modal-content{
+  display: block;
+  margin: 5% auto;
+max-width: 80%;
+border-radius: 10px;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+animation: zoomIn 0.3s ease;
+}
+
+.close{
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.close:hover{
+  color: #f00;
+}
+@keyframes zoomIn {
+  from {transform:scale(0.7); opacity:0;}
+  to{transform: scale(1);opacity: 1;}
+}
 section.form{
   padding: 5rem 0;
   display: flex;
   gap: 2rem;
   background: #f7fafa;
 }
-section.form img{
+section.form figure{
   width: 50%;
+}
+section.form figure img{
+  width: 100%;
 }
 section.form form{
   width: 50%;
@@ -455,12 +508,14 @@ color:#c5c3c3 ;
 font-size: 1.5rem;
 padding: 0  0.6rem 0 0.4rem;
 }
-section.form form  input{
+section.form form  input,
+section.form form .property select{
   background:#f1edf8;
-  width: 80%;
- height: 50px;
+  width: 100%;
+ height: 48px;
   outline: none;
   border: none;
+  color: #655d79;
 }
 section.form form button{
   width: 80%;
@@ -499,16 +554,27 @@ footer .footer_link p a{
 }
 /* Responsive */
 @media (max-width: 768px) {
-  /* .hero { flex-direction: column; text-align: center; }
-  .hero-content { max-width: 100%; }
-  .reason-cards, .steps-wrapper, .course-cards { flex-direction: column; }
-  .nav-links { display: none; flex-direction: column; gap: 10px; background: #184e5e; padding: 10px; }
-  .menu-toggle { display: block; } */
+ .hero-buttons button.hero-buttons__btn{
+    margin-top: 1.2rem;
+  }
   .hero-content {
     margin-top: 14rem;
   }
+  .hero-content h1{
+  font-size: 2.8rem;
+}
+.hero-content p{
+  font-size: 1.3rem;
+  line-height: 125%;
+  text-align: center;
+  padding: 0 1rem;
+}
   .navbar {
   padding: 2rem 1.5rem;
+  }
+  header.navbar button{
+    background: transparent;
+    border: none;
   }
   .navbar.scrolled {
  display: none;
@@ -557,12 +623,14 @@ footer .footer_link p a{
       flex-direction: column;
       padding: 5rem 10px;
     }
-    section.staff img{
+    section.staff figure{
       width: 100%;
       margin-top: 4rem;
       border-radius: 4px;
     }
-    .staff .staff-content{
+   
+    section.staff .staff-content{
+      width: 100%;
       padding: 0;
     }
      .projects {
@@ -574,9 +642,11 @@ footer .footer_link p a{
     section.form{
       padding: 0.8rem;
     }
-    section.form img{
-  width: 100%;
-}
+    section.form figure{
+      width: 100%;
+    }
+    /* section.form  img{
+} */
 section.form form{
   width: 100%;
   display: flex;
@@ -598,19 +668,6 @@ padding: 0  0.6rem 0 0.4rem;
 section.form form  input{
   width: 100%;
  height: 40px;
-}
-section.form form .property select {
-  all: unset;
-  display: block;
-  width: 100% !important;
-  height: 40px !important;
-  padding: 0 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background: #fff !important;
-  color: #333;
-  font-size: 16px;
-  box-sizing: border-box;
 }
 
 section.form form button{

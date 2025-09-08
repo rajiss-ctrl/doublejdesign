@@ -15,196 +15,206 @@
     <!-- Navbar -->
     <header class="navbar">
       <a href="#home">
-      <div class="logo">
-        <span>Double</span>
-        <span class="j">J</span>
-        <span>@Design</span>
-      </div>
+        <div class="logo">
+          <span>Double</span>
+          <span class="j">J</span>
+          <span>@Design</span>
+        </div>
       </a>
-      <nav class="nav-links" id="nav-links">
-        <a  href="#home">Home</a>
-        <a  href="#ourservice">Our Service</a>
-        <a  href="#gallery">Gallery</a>
-        <a  href="#how">How It Works</a>
-        <button class="btn">Get Started</button>
+      <nav class="nav-links" id="nav-links" aria-label="Main Navigation">
+        <a href="#home">Home</a>
+        <a href="#ourservice">Our Service</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#how">How It Works</a>
+        <a href="#how" class="btn">Get Started</a>
       </nav>
-      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open Menu">
+        ☰
+      </button>
     </header>
+
     <div class="hero-content">
-      <h1>Professional Painters and Decorators</h1>
-      <p>Premium painting and decorating services in Ilorin</p>
+      <h1>Transform Your Space</h1>
+      <p>Professinal painting & Decorating services in Abuja</p>
       <div class="hero-buttons">
         <button class="hero-buttons__btn">Explore Our Services</button>
       </div>
     </div>
+
     <div class="scroll-btn">
-       <i class="fa-solid fa-arrow-down"></i>
+       <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
     </div>
-     <div class="blend-overlay"></div>
+    <div class="blend-overlay"></div>
   </section>
 
-  <!-- Reasons -->
-   
+  <!-- Services Section -->
   <section id="ourservice" class="services">
-    <h2>Discover Our Services</h2>
-    <p>Painting and decorating services for all of New York.</p>
+    <h2>Our Services</h2>
+    <p>High-quality Solutions for Homes and Businesses</p>
     <div class="service-description">
-      <div class="description">
-        <img src="/img/Painting-and-Decorating.webp" alt="">
-        <h3>Domestic Painting</h3>
-        <p>Curabitur quam etsum lacus net netsum nulat iaculis etsimun vitae etsum nisle varius netsum.</p>
-      </div>
-      <div class="description">
-        <img src="/img/istockphoto-1370641474-612x612.jpg" alt="">
-        <h3>Domestic Painting</h3>
-        <p>Curabitur quam etsum lacus net netsum nulat iaculis etsimun vitae etsum nisle varius netsum.</p>
-      </div>
-      <div class="description">
-        <img src="/img/blue.jpeg" alt="">
-        <h3>Domestic Painting</h3>
-        <p>Curabitur quam etsum lacus net netsum nulat iaculis etsimun vitae etsum nisle varius netsum.</p>
-      </div>
+      <article class="description">
+        <img src="/img/Painting-and-Decorating.webp" alt="Domestic painting example">
+        <h3>Residential Painting</h3>
+        <p>Brighten your home with vibrant , lasting finishes.</p>
+      </article>
+      <article class="description">
+        <img src="/img/istockphoto-1370641474-612x612.jpg" alt="House painting service">
+        <h3>Office Spaces</h3>
+        <p>Create inspiring workspaces with modern designs.</p>
+      </article>
+      <article class="description">
+        <img src="/img/blue.jpeg" alt="Wall painting service">
+        <h3>Wallpaper Installation</h3>
+        <p>Stylish wallpaper for unique, personalized walls.</p>
+      </article>
     </div>
   </section>
+
+  <!-- Staff Section -->
   <section class="staff">
     <div class="staff-content">
-      <h2>Qualified painters and decorators.</h2>
-      <p>Velis demo enim ipsam voluptatem quia voluptas sit aspernatur netsum lorem fugit, seditum netis velas matrix net nesciunt.</p>
+      <h2>Why Choose U?.</h2>
+      <p>Our painters and Decorators bring experience, precision, and creativity to every project.</p>
       <ul>
-        <li> <span style="color: #27b36a; font-size: 1.8rem;">&#10004;</span> Quias netus magni netsum eos qui ratione sequi.</li>
-        <li><span style="color: #27b36a; font-size: 1.8rem;">&#10004;</span> Quias netus magni netsum eos qui ratione sequi.</li>
-        <li><span style="color: #27b36a; font-size: 1.8rem;">&#10004;</span> Quias netus magni netsum eos qui ratione sequi.</li>
+        <li><span style="color: #27b36a; font-size: 1.8rem;">&#10004;</span> Skilled professionals with proven expertise.</li>
+        <li><span style="color: #27b36a; font-size: 1.8rem;">&#10004;</span> Premium materials for lasting result.</li>
+        <li><span style="color: #27b36a; font-size: 1.8rem;">&#10004;</span> Reliable service delivered on time,  every time.</li>
       </ul>
-      <button>Discover More</button>
+      <a href="#how">Get a Free Quote</a>
     </div>
-    <img src="/img/depositphotos_82324272-stock-photo-painter-man-at-work-with.jpg" alt="">
+    <figure>
+      <img src="/img/depositphotos_82324272-stock-photo-painter-man-at-work-with.jpg" alt="Painter at work">
+    </figure>
   </section>
 
- <section class="parallax">
-  <div class="content-container">
-    <div class="content active">
-      <img src="/img/profile-1.webp" alt="">
-      <p>"Amazing service! Our home looks brand new."</p>
-      <h4>- John Doe</h4>
+  <!-- Testimonials -->
+  <section class="parallax" aria-label="Customer Testimonials">
+    <div class="content-container">
+      <blockquote class="content active">
+        <img src="/img/profile-1.webp" alt="Customer John Doe">
+        <p>"Amazing work! My living room looks brand new."</p>
+        <cite>- Abubakar, Garki area II Abuja</cite>
+      </blockquote>
+      <blockquote class="content">
+        <img src="/img/profile-2.jpg" alt="Customer Mark Smith">
+        <p>"Professional and reliable and reliable team. Highly recommended!"</p>
+        <cite>- James, Suleja</cite>
+      </blockquote>
+      <blockquote class="content">
+        <img src="/img/profile-3.jpg" alt="Customer Sarah Lee">
+        <p>"They finished on time and exceeded my expactations."</p>
+        <cite>- Maryam, Abuja</cite>
+      </blockquote>
     </div>
-    <div class="content">
-      <img src="/img/profile-2.jpg" alt="">
-      <p>"Professional and reliable. Highly recommended!"</p>
-      <h4>- Mark Smith</h4>
-    </div>
-    <div class="content">
-      <img src="/img/profile-3.jpg" alt="">
-      <p>"Fantastic job, exceeded expectations."</p>
-      <h4>- Sarah Lee</h4>
-    </div>
-  </div>
-  <div class="blend-overlay"></div>
-</section>
-<section id="gallery" class="projects">
-  <h2>Our Latest Projects</h2>
-  <p>Here are a few examples of our latest work.</p>
+    <div class="blend-overlay"></div>
+  </section>
 
-  <div class="project-list">
-    <div class="project-item">
-      <img src="/img/project-1.png" alt="Project 1">
-      <div class="overlay">
-        <i class="fa fa-key"></i>
-      </div>
-    </div>
-    <div class="project-item">
-      <img src="/img/project-2.png" alt="Project 2">
-      <div class="overlay">
-        <i class="fa fa-key"></i>
-      </div>
-    </div>
-    <div class="project-item">
-      <img src="/img/project-3.png" alt="Project 3">
-      <div class="overlay">
-        <i class="fa fa-key"></i>
-      </div>
-    </div>
-    <div class="project-item">
-      <img src="/img/project-1.png" alt="Project 4">
-      <div class="overlay">
-        <i class="fa fa-key"></i>
-      </div>
-    </div>
-    <div class="project-item">
-      <img src="/img/project-1.png" alt="Project 5">
-      <div class="overlay">
-        <i class="fa fa-key"></i>
-      </div>
-    </div>
-    <div class="project-item">
-      <img src="/img/project-1.png" alt="Project 6">
-      <div class="overlay">
-        <i class="fa fa-key"></i>
-      </div>
-    </div>
-  </div>
-</section>
+  <!-- Projects -->
+  <section id="gallery" class="projects">
+    <h2>Recent Projects</h2>
+    <p>Here are a few examples of our latest work.</p>
 
-<section id="how" class="form">
-  <img src="/img/free-quote.png" alt="">
-  <form>
-    <h2>Request a free quote today</h2>
-    <p>Fill the form bellow for a free, no obligation quote.</p>
-    <div class="company">
-      <i class="fa-solid fa-user"></i>
-      <input type="text" placeholder="Company*">
+    <div class="project-list">
+      <figure class="project-item">
+        <img src="/img/project-1.png" alt="Project 1">
+        <figcaption class="overlay">
+          <i class="fa fa-key" aria-hidden="true"></i>
+        </figcaption>
+      </figure>
+      <figure class="project-item">
+        <img src="/img/project-2.png" alt="Project 2">
+        <figcaption class="overlay">
+          <i class="fa fa-key" aria-hidden="true"></i>
+        </figcaption>
+      </figure>
+      <figure class="project-item">
+        <img src="/img/project-3.png" alt="Project 3">
+        <figcaption class="overlay">
+          <i class="fa fa-key" aria-hidden="true"></i>
+        </figcaption>
+      </figure>
+      <figure class="project-item">
+        <img src="/img/project-1.png" alt="Project 4">
+        <figcaption class="overlay">
+          <i class="fa fa-key" aria-hidden="true"></i>
+        </figcaption>
+      </figure>
+      <figure class="project-item">
+        <img src="/img/project-1.png" alt="Project 5">
+        <figcaption class="overlay">
+          <i class="fa fa-key" aria-hidden="true"></i>
+        </figcaption>
+      </figure>
+      <figure class="project-item">
+        <img src="/img/project-1.png" alt="Project 6">
+        <figcaption class="overlay">
+          <i class="fa fa-key" aria-hidden="true"></i>
+        </figcaption>
+      </figure>
     </div>
-    <div class="email">
-      <i class="fa-solid fa-envelope"></i>
-      <input type="text" placeholder="Company*">
-    </div>
-    <div class="property">
-      <i class="fa-solid fa-pen"></i>
-      <select style="width: 100%; height: 40px; outline: none; border: none; background: #f1edf8; color: #999898;">
-        <option value="">Property Type</option>
-        <option value="">Residential</option>
-        <option value="">Comercial</option>
-      </select>
-    </div>
-    <button>REQUEST QUOTE NOW</button>
-    <p>Competitive On Price • TrustMark Accredited</p>
-  </form>
+  </section>
 
-</section>
-
-<!-- Font Awesome for icons -->
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> -->
-
+  <!-- Quote Form -->
+  <section id="how" class="form">
+    <figure>
+      <img src="/img/free-quote.png" alt="Free quote request illustration">
+    </figure>
+    <form>
+      <h2>Request a quote today</h2>
+      <p>Fill in the details below and  we'll get back to you.</p>
+      <div class="company">
+        <i class="fa-solid fa-user"></i>
+        <input type="text" placeholder="Company*" required>
+      </div>
+      <div class="email">
+        <i class="fa-solid fa-envelope"></i>
+        <input type="email" placeholder="Email*" required>
+      </div>
+      <div class="property">
+        <i class="fa-solid fa-pen"></i>
+        <select required>
+          <option value="">Select Service</option>
+          <option value="">Office Spaces</option>
+          <option value="">Wallpaper Installation</option>
+          <option value="residential">Residential</option>
+          <option value="commercial">Commercial</option>
+        </select>
+      </div>
+      <button type="submit">REQUEST QUOTE NOW</button>
+      <p>Competitive On Price • TrustMark Accredited</p>
+    </form>
+  </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="footer_link">
-      <img src="/img/get-in-touch_icon.png" alt="">
+    <section class="footer_link">
+      <img src="/img/get-in-touch_icon.png" alt="Contact icon">
       <h2>Get In Touch</h2>
-      <p>10 Oxford Street, London, UK, E1 1EC</p>
-      <p><a href="">the-office@leadpage.co.uk</a></p>
-      <a href="">+44 987 654 321</a>
-      <p></p>
-    </div>
-    <div class="footer_link">
+      <address>
+        <p>Lane III Owo street, Abuja, E1 1EC</p>
+        <p><a href="mailto:the-office@leadpage.co.uk">the-office@leadpage.com</a></p>
+        <a href="tel:+44987654321">+234 987 654 321</a>
+      </address>
+    </section>
+    <section class="footer_link">
       <img src="/img/message.png" alt="social media">
       <h2>Social Media</h2>
-      <p>See bellow where you can find us.</p>
-    </div>
-    <div class="footer_link">
-      <img src="/img/link-removebg.png" alt="">
+      <p>See below where you can find us.</p>
+    </section>
+    <section class="footer_link">
+      <img src="/img/link-removebg.png" alt="Links icon">
       <h2>Useful Links</h2>
-      <p>
-        <a href="https://www.x.com/rajisanjo">Our Cookies Policy</a>
-      </p>
-      <p>
-        <a href="https://www.x.com/rajisanjo">Meet The Team Behind LeadPage</a>
-      </p>
-      <p>
-        <a href="https://www.x.com/rajisanjo">Terms and Conditions</a>
-      </p>
-    </div>
+      <p><a href="https://www.x.com/rajisanjo">Our Cookies Policy</a></p>
+      <p><a href="https://www.x.com/rajisanjo">Meet The Team Behind LeadPage</a></p>
+      <p><a href="https://www.x.com/rajisanjo">Terms and Conditions</a></p>
+    </section>
   </footer>
+
   <p class="copy">© 2025 Raji Sarafadeen. All Rights Reserved.</p>
+  <div class="modal" id="modal">
+    <span class="close">&times;</span>
+    <img alt="" class="modal-content" id="modal-img" alt="Expanded Project">
+  </div>
 
   <script src="index.js"></script>
 </body>
